@@ -1,6 +1,20 @@
+server:
+  port: 9999
+  
 spring:
-        datasource:
-                driver-class-name: com.mysql.jdbc.Driver
-                username: root
-                password: hjh114432
-                url: jdbc:mysql://127.0.0.1/demo_consumer?characterEncoding=utf-8&userSSL=false
+  application:
+    name: demo-consumer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: hjh114432
+    url: jdbc:mysql://127.0.0.1/demo_consumer?characterEncoding=utf-8&userSSL=false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+ribbon:
+  eureka:
+    enabled: true        
