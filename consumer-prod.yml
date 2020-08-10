@@ -1,20 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 server:
-  port: 9999
-  
+  port: 8765
 spring:
   application:
     name: consumer
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: hjh114432
-    url: jdbc:mysql://127.0.0.1/demo_consumer?characterEncoding=utf-8&userSSL=false
 
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
-
-ribbon:
-  eureka:
-    enabled: true        
+#Feign是自带断路器的，在D版本的Spring Cloud之后，它没有默认打开
+# feign.hystrix.enabled: true  或者下面的写法
+feign:
+  hystrix:
+    enabled: true
