@@ -12,7 +12,7 @@ spring:
     name: consumer
   datasource:
     #账号配置
-    url: jdbc:mysql://127.0.0.1:3306/consumer?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/demo-consumer?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: hjh114432
     driver-class-name: com.mysql.cj.jdbc.Driver
