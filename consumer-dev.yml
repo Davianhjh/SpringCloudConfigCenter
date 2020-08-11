@@ -5,6 +5,9 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    # 设置cluster的名称，配合turbine使用
+    metadata-map:
+      cluster: feign
 server:
   port: 8766
 spring:
